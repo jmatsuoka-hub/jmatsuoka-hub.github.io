@@ -10,7 +10,8 @@ function loadpage(e){ //trigger an event
     $("#menu a.active").removeClass("active") //select whatever items have the "active" class and remove it
     $(this).addClass("active"); //add the "active" class when the button is clicked
     
-    $("#content").load("about.html");
+    var href = $(this).attr("href"); //creates a variable "href" that grabs the name of the link being clicked
+    $("#content").load(href); //loads the link referenced above in the "content" section
 
 }
 
